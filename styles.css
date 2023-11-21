@@ -1,0 +1,534 @@
+
+   /* Estilos generales */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #494747;
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+}
+
+h2 {
+  
+  font-family: 'Quicksand', sans-serif;
+  font-weight: lighter;
+  font-size: 45px;
+  /* margin-top: 10px; */
+}
+
+h3 {
+  
+  font-family: 'Quicksand', sans-serif;
+  font-weight: lighter;
+}
+
+/* Estilos para el header y la barra de navegación */
+
+header {
+  padding: 0;
+}
+
+
+/* Navbar */
+.menu {
+  background-color: #00B2B2;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.menu li {
+  margin-right: 10px;
+}
+
+.menu li:first-child a {
+  display: flex;
+  align-items: center;
+  padding-right: 150px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.menu li:first-child a img {
+  height: 25px;
+  width: auto;
+  margin: 20px;
+  margin-right: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.menu li:not(:first-child) a {
+  padding-left: 30px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* Media Queries */
+@media (max-width: 576px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  .menu li:first-child a {
+    padding-right: 0;
+  }
+
+  .menu li:not(:first-child) a {
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 20px;
+  }
+
+  .menu li:first-child a {
+    padding-right: 0;
+  }
+
+  .menu li:not(:first-child) a {
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Estilos jumbotrón */
+#jumbotron {
+  background-image: url("./img/jumbotron.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  max-height: 500px;
+  
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.jumbotron-content {
+  
+  padding: 20px;
+}
+
+.jumbotron-content h1 {
+  color: #2c2a2a;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 180px;
+  max-width: 300px;
+  /* text-align: right; */
+  position: relative;
+  right: -138%;
+  top: 0%
+}
+
+.btn-cta {
+  background-color: #00B2B2;
+  color: #FFFFFF;
+  font-size: 24px;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 20px;
+  
+}
+
+@media (max-width: 768px) {
+  .jumbotron-content h1 {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .jumbotron-content h1 {
+    display: none;
+  }
+}
+
+/* Estilos para las secciones */
+section {
+  padding: 50px;
+  
+}
+
+#home {
+  background-color: #FFFFFF;
+}
+
+#sucursales {
+  background-color: #FFFFFF;
+}
+
+#productos {
+  background-color: #FFFFFF;
+}
+
+/* Estilos para las cards */
+.card-container {
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+ 
+  }
+}
+
+@media (max-width: 576px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    margin-right: 80px;
+  }
+}
+
+.card {
+  /* flex: 0 0 300px; */
+  max-width: 300px;
+  margin: 20px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.card h3 {
+  margin-top: 20px;
+}
+
+.card p {
+  margin: 10px 0;
+}
+
+/* Media Query para tamaño medio */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Para mostrar una card por fila en mid */
+  }
+}
+
+/* Media Query para tamaño pequeño */
+@media (max-width: 576px) {
+  .card {
+    max-width: none; /* Ancho máximo auto en small */
+    margin-right: -40px;
+  }
+}
+
+/* Estilos Sección sucursales */
+
+.sucursales {
+  background-color: #00B2B2;
+}
+
+.card-sucursales {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 20px auto;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+}
+
+.card-sucursales .card-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.card-sucursales .content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-sucursales .content h2 {
+  margin: 0;
+}
+
+.card-sucursales .content .text {
+  margin-left: 20px;
+}
+
+.card-sucursales p {
+  margin: 50px 30px 20px 20px;
+}
+
+.card-sucursales img {
+  width: 700px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Media queries */
+@media screen and (max-width: 1200px) {
+  .card-sucursales {
+    flex-direction: column;
+  }
+
+  .card-sucursales .card-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-sucursales img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-sucursales p {
+    margin: 20px;
+  }
+}
+
+
+/* Estilos para el footer */
+footer {
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #FF4444;
+  padding: 20px;
+  text-align: center;
+
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* Estilos página agregarcliente */
+
+.main-section {
+  background-image: url("./img/crepazul.jpeg");
+  background-size: cover;
+  /* position: absolute; */
+  background-position: top center;
+  /* filter: sepia(50%); Ajusta el valor de sepia según tus preferencias */
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container-ingreso {
+  /* margin: 0px auto; */
+  max-width: 500px;
+  padding: 20px;
+  width: 100%;
+  max-height: 100%;
+  margin-left: 50px;
+  
+}
+
+.white-card {
+  max-width: 350px;
+  max-height: 450px;
+  /* margin: auto; */
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 0px 40px 40px 40px;
+  margin-top: -25px;
+  margin-bottom: 20px;
+  
+}
+
+.white-card .form-group {
+  margin-bottom: 30px;
+  margin-top: -20px;
+}
+
+.white-card label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 32px;
+  text-align: left;
+  margin-left: 30px;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.white-card input[type="text"],
+.white-card input[type="tel"] {
+  width: 79%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0px solid #dddddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.white-card button[type="submit"] {
+  background-color: #00B2B2;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: lighter;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 100%;
+    padding: 20px 10px;
+  }
+
+  .white-card {
+    max-width: 100%;
+  }
+
+  .white-card input[type="text"],
+  .white-card input[type="tel"] {
+    width: 100%;
+  }
+}
+
+ /* Estilos página ingreso */
+
+.main-section-ingreso {
+  background-image: url("./img/creperierouge.png");
+  background-size: cover;
+  /* position: absolute; */
+  background-position: top center;
+  /* filter: sepia(50%); Ajusta el valor de sepia según tus preferencias */
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* Cambiar a flex-start */
+  align-items: center;
+}
+
+.form-container {
+  max-width: 500px;
+  padding: 20px;
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: flex-start; /* Cambiar a flex-start */
+}
+
+.ingreso-card {
+  max-width: 300px;
+  max-height: 450px;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
+.ingreso-card h2 {
+  margin-top: 0px;
+}
+
+.ingreso-card .form-group {
+  margin-bottom: 30px;
+  margin-top: -20px;
+}
+
+.ingreso-card label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 32px;
+  text-align: left;
+  margin-left: 7px;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.ingreso-card input[type="text"],
+.ingreso-card input[type="password"] {
+  width: 85%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0px solid #dddddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ingreso-card button[type="submit"] {
+  background-color: #00B2B2;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: lighter;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 100%;
+    padding: 20px 10px;
+  }
+
+  .ingreso-card {
+    max-width: 100%;
+  }
+
+  .ingreso-card input[type="text"],
+  .ingreso-card input[type="password"] {
+    width: 100%;
+  }
+}
+
+
+
